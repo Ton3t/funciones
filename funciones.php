@@ -44,4 +44,25 @@
             return "Precion final: " . $num;
         }
     }
+
+    function recorrerMatriz($matriz) {
+        $contador = 0;
+        $compara = 0;
+
+        // Compara la matriz y deja compara con el valor mas alto //
+        foreach($matriz as $codigo => $modulo) {
+            $contador = count($modulo);
+            if($compara < $contador) {
+                $compara = $contador;
+            }
+        }
+
+        // Muestra el número total de elementos de cada array //
+        foreach($matriz as $codigo => $contenido) {
+            $contador = count($contenido);
+            echo $contador . "<br>";
+        }
+
+        return $compara;
+    }
 ?>
